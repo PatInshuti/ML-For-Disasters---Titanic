@@ -14,11 +14,10 @@ import matplotlib.pyplot as plt
 
 dataset = pd.read_csv("train.csv")
 data = dataset.describe()
-#dataset = dataset.iloc[:].values
 
-#lets use nearest k-nearest neigbours classfiers
-from sklearn.neighbors import KNeighborsClassifier
+dataset.shape
+dataset.columns
 
-knn = KNeighborsClassifier()
-
-knn.fit()
+dataset = dataset.drop("PassengerId", axis=1)
+#if you take a close look, not all features like PassengerID
+#function to remove 
